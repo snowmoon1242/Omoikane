@@ -1,0 +1,22 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<% provide(:title, 'new book') %>
+<h1>Book Add</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@book) do |f| %>
+
+      <%= f.label :isbn %>
+      <%= f.text_field :isbn %>
+
+      <%= f.label :book_name %>
+      <%= f.text_field :book_name %>
+
+      <%= f.submit "Create new book", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
